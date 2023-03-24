@@ -1,0 +1,31 @@
+  
+{% extends "master_template.html" %}
+{%block title%}
+  This is Intro
+{%endblock%}
+
+{% block body%}
+  <h2>Welcome,</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Class</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {%for stud in students%}
+      <tr>
+        <td> {{stud.Name}}</td>
+        <td>{{stud.age}}</td>
+        <td>{{stud.gender}}</td>
+        <td>{{stud.clss}}</td>
+        <td></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {%endblock%}
